@@ -12,7 +12,7 @@
 int reCat(char* fileName) {
     /* A recreated cat command, it reads the contents of a file and prints it to the console.
      * @param fileName: the name of the file to be read
-     * @return: 0 if the file is read successfully, 1 if the file does not exist
+     * @return: 0 if the file is read successfully, it will exit with code 1 if the file does not exist
      */
 
     // Open the file in read mode
@@ -21,7 +21,7 @@ int reCat(char* fileName) {
     // Check if the file exists
     if (file == NULL) {
         printf("File does not exist\n");
-        return 1;
+        exit(1);
     }
 
     // Create a pointer to store each character of the file
